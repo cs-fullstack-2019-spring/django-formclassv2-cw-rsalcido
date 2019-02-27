@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<H1>EMPLOYEE APLICATION</H1>
+
+<!--PER QUESTION HEADED IS APPLIED IN BOLD-->
+<body>
+<!--NECCESSARY INFORMATION FOR EMPLOYEE APLICATION FORM TO BE CREATED.-->
+<form action="{%'EmployeeApp'%}" method="post">
+    {%csrf_token%}
+    {{ newForm }}
+    <button>SUBMIT</button>
+</form>
+
+</body>
+</html>
