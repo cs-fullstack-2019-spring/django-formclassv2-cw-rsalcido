@@ -6,9 +6,10 @@
 </head>
 <body>
 <h1>Users</h1>
-<form method="POST">
-    {%csrf_token%}
-    {{ form.as_p }}
+{% url 'EmployeeApp' %}
+<form  action= "{% url 'EmployeeApp' %}" method="post">
+    {% csrf_token %}
+    {{ newForm }}
     <input type="submit" value="Submit">
 </form>
 

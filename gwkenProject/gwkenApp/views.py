@@ -13,11 +13,16 @@ def EmployeeApp(request):
 
     if(request.method == 'POST'):
         print(request.POST)
-        context = {"name": request.POST["name"]}
-        return render(request, "EmployeeApp/Application.html", context)
+        context = {
+            'name': request.POST['name'],
+            'dateofbirth':  request.POST ["dateofbirth"],
+            'positionapplyingfor': request.POST["positionapplyingfor"],
+            'salary': request.POST["salary"],
+        }
+        return render(request, "gwkenApp/Application.html", context)
     else:
         newForm = EmployeeAppForm()
         context = {
             "newForm": newForm,
         }
-        return render(request, "EmployeeApp/applicationresults.html", context)
+        return render(request, "gwkenApp/applicationresults.html", context)
